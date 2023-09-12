@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Trabajo práctico final JAVASCRIPT</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicón-->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?v=2">
+    <!--Declaración de fichero estilos-->
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <!--Delcaración fuente de letra-->
+    <link href="https://file.myfontastic.com/UvoKhJfr6Xfkaee7qqaKQf/icons.css" rel="stylesheet">
+    <!--Declaración de íconos redes sociales-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!--Declaración de estilos css del plugin de openstreetmap-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""> 
+    <!--Declaración de estilos css del plugin de rutas de openstreetmap-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css">
+    <!--Lamada del plugin de js de openstreetmap -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!--Lamada del plugin de rutas js de openstreetmap -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+</head>
+<body>
+    <div class="parte-superior">
+        <p>Av. Río Guadaíra 8204-Sevilla</p>
+    </div>
+    <header>   
+        <div>   
+             <!--Barra de menú-->
+            <nav>
+                <ul>
+                    <li><a class="enlace" href="../index.html">Inicio</a></li>
+                    <li><a class="enlace" href="../views/galería.html">Galería</a></li>
+                    <li><a class="enlace" href="../views/presupuesto.html">Presupuesto</a></li>
+                    <li><a class="enlace active" href="../views/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--Carrito de compras-->
+        <div class="carritoCompra">
+            <img  src="../assets/icons/cart.png" alt="carrito de shopping">
+        </div> 
+    </header>
+         
+    <main>
+        <!--Ventana del chat de ayuda al usuario-->
+        <div class="chat">
+            <img src="../assets/icons/whatsappIcon.png" alt="whatsapp ícono">
+              <p>¿Cómo podemos ayudarte?</p>
+          </div>
+        <!--Div que contiene la información de contatco de la tienda-->
+        <div class="contenedorContacto">
+            <h2 class="titulo">Contáctanos</h2>
+            <div class="contactoInfo">
+                <div>
+                    <h2>Teléfono</h2>
+                    <p>967 25 00 65</p>
+                </div>
+                <div>
+                    <h2>Correo electrónico</h2>
+                    <p>losmilagros@panaderialm</p>
+                </div>
+                <div>
+                    <h2> Dirección</h2>
+                    <p>Av. Río Guadaíra 8204-Sevilla</p>
+                </div>
+                <div>
+                    <h2>Horario de apertura</h2>
+                    <p>De Lunes a Domingo de 9:00 a 20:00</p>
+                </div>
+            </div>
+        </div>       
+        <div>
+            <h2 class="subtitulo">Donde encontrarnos</h2>
+            <!--Div que contiene el mapa -->   
+            <div id="map"></div>
+        </div> 
+        <div class="parte-inferior"></div>   
+    </main>
+    <footer>
+        <!--Primera parte del footer con información de compra-->
+        <div class="info-compra">
+            <div class="icon-box">
+                <div>
+                    <div class="icon">
+                        <img  src="../assets/icons/watch.png" alt="reloj"> 
+                    </div> 
+                    <div class="texto-icono">
+                        <p>Envío inmediato</p>
+                    </div>               
+                </div>
+                <div>
+                    <div class="icon">
+                        <img src="../assets/icons/shoppingBag.png" alt="bolsa de compra">  
+                    </div>   
+                    <div class="texto-icono">
+                        <p>Recogida en tienda</p>
+                    </div>
+                </div>     
+                <div>
+                    <div class="icon">
+                        <img src="../assets/icons/open.png" alt="símbolo abierto">     
+                    </div>
+                    <div class="texto-icono">
+                        <p>Lunes a Domingo</p>
+                    </div>    
+                </div> 
+                <div>
+                    <div class="icon">
+                        <img src="../assets/icons/safety.png" alt="compra segura">     
+                    </div>
+                    <div class="texto-icono">
+                        <p>Pago rápido y seguro</p>
+                    </div>  
+                </div>    
+            </div>          
+        </div>
+        <!--Segunda parte del footer con información de legales y redes sociales-->
+        <div class="contenido-footer">
+            <div>
+                <h4><i class='bx bxs-map' style='color:#fff' ></i> UBICACIÓN </h4>
+                <p>Av. Río Guadaíra 8204</p>
+                <p id="ubicacion">Sevilla-España</p>
+            </div>
+            <div >
+                <h4>LEGALES</h4>
+                <p>Términos de uso</p>
+                <p>Política de privacidad</p>
+                <p>Política de cookies</p>
+            </div>
+            <!--Redes sociales-->
+            <div class="redes">
+                <div class="iconos-redes">
+                    <i class='bx bxl-twitter bx-burst' style='color:#fff' ></i>
+                </div>
+                <div class="iconos-redes">
+                    <i class='bx bxl-facebook-circle bx-burst' style='color:#fff' ></i>
+                </div>
+                <div class="iconos-redes">
+                    <i class='bx bxl-instagram-alt bx-burst' style='color:#fff' ></i>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--LLamada al fichero de mapa de js-->
+    <script src= "../js/openstreetmap.js"></script>
+    </body>
+    </html>

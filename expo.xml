@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<expociciones>
+
+ <novedad>
+ <evento>Expo Pan 2023</evento>
+ <fecha>25/09/2023</fecha>
+ <provincia>Sevilla</provincia>
+ <direccion>Calle Asturias 2500</direccion>
+ <tema>Pastelería Boutique</tema>
+</novedad>
+ <novedad>
+ <evento>Conferencia "Producción 100% ecológica"</evento>
+ <fecha>05/10/2023</fecha>
+ <provincia>Cádiz</provincia>
+ <direccion>Av. Martín Fierro 113</direccion>
+ <tema>Panadería sustentable</tema>
+</novedad>
+ <novedad>
+ <evento>The Big Degustation</evento>
+ <fecha>12/11/2023</fecha>
+ <provincia>Almería</provincia>
+ <direccion>Calle Segovia 8222</direccion>
+ <tema>Degustación de 50 panes y vinos</tema>
+</novedad>
+<novedad>
+ <evento>Bakery premios 2023</evento>
+ <fecha>15/12/2023</fecha>
+ <provincia>Madrid</provincia>
+ <direccion>Av Segurola 4850</direccion>
+ <tema>Award 2023 al mejor panadero de España</tema>
+</novedad>
+
+</expociciones>
